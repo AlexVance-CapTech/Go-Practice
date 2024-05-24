@@ -10,12 +10,12 @@ steps:
     version: '1.13.5' 
 - task: Go@0
   inputs:
-    command: 'get'
-    arguments: '-v all'
+    command: 'build'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
 - task: Go@0
   inputs:
-    command: 'build'
+    command: 'get'
+    arguments: '-v all'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
 - task: Go@0
   inputs:
